@@ -1,6 +1,6 @@
 <template>
 <div>
-  <mu-appbar color="primary" title="Muse-UI-Loading"></mu-appbar>
+  <mu-appbar color="primary" title="Muse-UI-Message"></mu-appbar>
   <div style="padding: 16px">
     <mu-button @click="$alert('Hello world', 'Alert')">Alert</mu-button>
     <mu-button @click="$confirm('Write Hello world ??', 'Confirm')" color="primary">confirm</mu-button>

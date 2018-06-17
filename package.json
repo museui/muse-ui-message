@@ -1,11 +1,11 @@
 {
-  "name": "muse-ui-loading",
-  "version": "0.1.1",
-  "description": "Muse-UI plugin loading ",
-  "main": "dist/muse-ui-loading.common.js",
-  "module": "dist/muse-ui-loading.esm.js",
-  "unpkg": "dist/muse-ui-loading.js",
-  "jsdelivr": "dist/muse-ui-loading.js",
+  "name": "muse-ui-message",
+  "version": "0.1.0",
+  "description": "Muse-UI plugin message box ",
+  "main": "dist/muse-ui-message.common.js",
+  "module": "dist/muse-ui-message.esm.js",
+  "unpkg": "dist/muse-ui-message.js",
+  "jsdelivr": "dist/muse-ui-message.js",
   "directories": {
     "test": "test"
   },
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/myronliu347/muse-ui-loading.git"
+    "url": "git+https://github.com/myronliu347/muse-ui-message.git"
   },
   "keywords": [
     "muse-ui",
@@ -27,9 +27,9 @@
   "author": "myron.liu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/myronliu347/muse-ui-loading/issues"
+    "url": "https://github.com/myronliu347/muse-ui-message/issues"
   },
-  "homepage": "https://github.com/myronliu347/muse-ui-loading#readme",
+  "homepage": "https://github.com/myronliu347/muse-ui-message#readme",
   "peerDependencies": {
     "vue": "^2.5.0"
   },

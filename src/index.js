@@ -32,11 +32,11 @@ const Message = function (options) {
         modal = null;
       }, 500);
       return resolve({ result, value });
-    })
+    });
   });
 };
 
-Message.config = function(options) {
+Message.config = function (options) {
   if (!options || Array.isArray(options) || typeof options !== 'object') return config;
   for (const key in options) {
     if (!options.hasOwnProperty(key)) continue;
@@ -70,7 +70,7 @@ Message.config = function(options) {
       ...options,
       mode: mode
     });
-  }
+  };
 });
 
 Message.install = function (Vue, options) {

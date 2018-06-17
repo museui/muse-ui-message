@@ -35,14 +35,14 @@ export default {
       open: false,
       value: this.inputValue,
       errorText: ''
-    }
+    };
   },
   methods: {
     handleClose (result) {
       if (this.beforeClose) {
         return this.beforeClose(result, this, () => this.close(result));
       }
-      return this.close(result)
+      return this.close(result);
     },
     close (isOk) {
       if (isOk && this.mode === 'prompt' && this.validator) {
@@ -80,7 +80,7 @@ export default {
       });
     },
     createContent (h) {
-      let content = typeof this.content === 'function' ? this.content(h) : this.content;
+      const content = typeof this.content === 'function' ? this.content(h) : this.content;
       return h('div', {
         class: 'mu-modal-content'
       }, [
@@ -115,7 +115,15 @@ export default {
         }, this.okLabel)
       );
       if (this.mode !== 'alert') {
-        actions.unshift(h('mu-button', { props: { flat: true }, slot: 'actions', on: { click: () => this.handleClose(false) } }, this.cancelLabel));
+        actions.unshift(h('mu-button', {
+          props: {
+            flat: true
+          },
+          slot: 'actions',
+          on: {
+            click: () => this.handleClose(false)
+          }
+        }, this.cancelLabel));
       }
       return actions;
     }

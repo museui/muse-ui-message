@@ -6,6 +6,12 @@
   "module": "dist/muse-ui-message.esm.js",
   "unpkg": "dist/muse-ui-message.js",
   "jsdelivr": "dist/muse-ui-message.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "types"
+  ],
   "directories": {
     "test": "test"
   },

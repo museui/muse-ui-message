@@ -7,7 +7,7 @@ const Modal = Vue.extend(ModalOpt);
 const isServer = typeof window === 'undefined';
 const Message = function (options) {
   if (isServer) return;
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     let modal = new Modal({
       el: document.createElement('div'),
       propsData: {

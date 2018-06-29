@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import Dialog from 'muse-ui/lib/Dialog';
-import Button from 'muse-ui/lib/Button';
-import Icon from 'muse-ui/lib/Icon';
-import TextField from 'muse-ui/lib/TextField';
+import Dialog from 'muse-ui/src/Dialog';
+import Button from 'muse-ui/src/Button';
+import Icon from 'muse-ui/src/Icon';
+import TextField from 'muse-ui/src/TextField';
 import Message from './index';
-import 'muse-ui/lib/styles/theme.less';
+import 'muse-ui/src/styles/theme.less';
 
 Vue.use(Dialog);
 Vue.use(Button);

@@ -1,6 +1,6 @@
 {
   "name": "muse-ui-message",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Muse-UI plugin message box ",
   "main": "dist/muse-ui-message.common.js",
   "module": "dist/muse-ui-message.esm.js",
@@ -20,7 +20,7 @@
     "dev": "NODE_ENV=development parcel demo/index.html",
     "lint": "eslint --ext .js src",
     "test:coverage": "NODE_ENV=test jest -i --coverage",
-    "build": "rm -rf dist && NODE_ENV=module rollup --config rollup.config.js &&  NODE_ENV=production rollup --config rollup.config.js"
+    "build": "rm -rf dist && rollup --config rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -56,7 +56,7 @@
     "jest-css-modules": "^1.1.0",
     "jest-serializer-html": "^5.0.0",
     "less": "^3.0.4",
-    "muse-ui": "^3.0.0-rc.1",
+    "muse-ui": "^3.0.0-rc.4",
     "parcel-bundler": "1.7.1",
     "parcel-plugin-vue": "^1.5.0",
     "postcss-modules": "^1.1.0",
@@ -68,30 +68,5 @@
     "rollup-plugin-uglify": "^4.0.0",
     "vue": "^2.5.16",
     "vue-jest": "^2.6.0"
-  },
-  "jest": {
-    "verbose": false,
-    "roots": [
-      "<rootDir>/test"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "vue"
-    ],
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "transform": {
-      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
-      "\\.(less)$": "<rootDir>/node_modules/jest-css-modules",
-      "\\.(css)$": "<rootDir>/node_modules/jest-css-modules",
-      ".*\\.(vue|js)$": "<rootDir>/node_modules/babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!vue-router)"
-    ],
-    "snapshotSerializers": [
-      "jest-serializer-html"
-    ]
   }
 }

@@ -45,10 +45,16 @@ new Vue({
   }
 })
 
-// or 
+// or
 MuseUIMessage.alert('Hello world');
 MuseUIMessage.confirm('Hello world ?');
 MuseUIMessage.prompt('Input Some I');
+
+// use with router
+
+router.beforeEach(() => {
+  MuseUIMessage.close();
+});
 ```
 
 
@@ -66,7 +72,7 @@ export default {
   width: 350,                                     // dialog width
   maxWidth: '80%',                                // dialog max width
   className: '',                                  // dialog class
-  okLabel: '确定',                                 // dialog ok label  
+  okLabel: '确定',                                 // dialog ok label
   cancelLabel: '取消',                             // dialog cancel label
   transition: 'scale'                             // 'slide-top', 'slide-bottom', 'slide-left', 'slide-right', 'fade', 'scale'
 };
@@ -105,7 +111,7 @@ this.$confirm('confirm ?')
 | width | dialog width | Number / String | — | 350 |
 | maxWidth | max width | Number / String | — | 80% |
 | className | dialog class | String | — | — |
-| transition | transition animate | String | slide-top / slide-bottom / slide-left / slide-right / fade / scale | scale | 
+| transition | transition animate | String | slide-top / slide-bottom / slide-left / slide-right / fade / scale | scale |
 | beforeClose | before close callback  (result, instance, done) | Function | — | — |
 | okLabel | ok button label | String | — | — |
 | cancelLabel | cancel button label | String | — | — |

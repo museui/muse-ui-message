@@ -1,6 +1,6 @@
 {
   "name": "muse-ui-message",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Muse-UI plugin message box ",
   "main": "dist/muse-ui-message.common.js",
   "module": "dist/muse-ui-message.esm.js",

@@ -5,6 +5,7 @@ import ModalOpt from './modal';
 const Modal = Vue.extend(ModalOpt);
 
 const isServer = typeof window === 'undefined';
+const instances = [];
 const Message = function (options) {
   if (isServer) return;
   return new Promise((resolve) => {
@@ -18,19 +19,24 @@ const Message = function (options) {
     });
     document.body.appendChild(modal.$el);
     modal.open = true;
-
     if (modal.mode === 'prompt') {
       setTimeout(() => {
         modal.$el && modal.$el.querySelector('input').focus();
       }, 200);
     }
 
+    instances.push(modal);
     modal.$on('close', function (result, value) {
       setTimeout(() => {
         modal.$el && modal.$el.parentNode && modal.$el.parentNode.removeChild(modal.$el);
         modal.$destroy();
         modal = null;
       }, 500);
+
+      const index = instances.indexOf(modal);
+      if (index !== -1) {
+        instances.splice(index, 1);
+      }
       return resolve({ result, value });
     });
   });
@@ -43,6 +49,12 @@ Message.config = function (options) {
     config[key] = options[key];
   }
   return config;
+};
+
+Message.close = function () {
+  instances.forEach((modal) => {
+    modal.close(false);
+  });
 };
 
 ['alert', 'confirm', 'prompt'].forEach((mode) => {

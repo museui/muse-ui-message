@@ -13,4 +13,6 @@ const app = new Vue({
   ...App
 });
 
+window.Message = MuseUIMessage;
+
 app.$mount('#app');

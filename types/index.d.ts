@@ -43,6 +43,10 @@ export interface Message {
   prompt(content: string, title: string, options: MessageOptions): Promise<MessageReturn>;
 }
 
+export class Message {
+  static install: PluginFunction<MessageOptions>;
+}
+
 export default Message;
 
 
